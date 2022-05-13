@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,600,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #14171a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #14171a;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #657786;
+  margin-bottom: 1rem;
+}
+
+button,
+textarea,
+input {
+  font-family: "Ubuntu", sans-serif;
+}
+
+#analysis-chart {
+  height: 320px;
+  width: 320px;
+}
+
+.analysis-card {
+  max-width: 560px;
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 1px 2px 8px 4px #ffffff1a, 4px 2px 8px 4px #ffffff1a;
+}
+
+.analysis-card .card-heading {
+  margin-bottom: 1rem;
+  max-width: 300px;
+}
+
+.analysis-card .card-body {
+  padding: 0 0.5rem;
+}
+
+.analysis-card .input {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.analysis-card .input input {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+
+.analysis-card .input::before,
+.analysis-card .input::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  z-index: 1;
+  width: 100%;
+  transition: linear 0.2s;
+  background-color: rgb(233, 233, 233);
+  left: 0;
+  bottom: 0;
+}
+
+.analysis-card .input::after {
+  left: 50%;
+  width: 0;
+  z-index: 2;
+  background-color: #1da1f2;
+}
+
+.analysis-card .input:focus-within::after {
+  width: 100%;
+  left: 0;
+}
+
+.analysis-card .submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: #1da1f2;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.analysis-card .submit-btn:hover {
+  background-color: #0693eb;
+}

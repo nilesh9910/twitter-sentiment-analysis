@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Analysis Chart</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div>
+      <canvas id="analysis-chart"></canvas>
+    </div>
+    <script>
+      const data = {
+        labels: ["Negative", "Positive", "Neutral"],
+        datasets: [
+          {
+            label: "Twitter Sentiment Analysis",
+
+              data: {{set}},
+            backgroundColor: [
+              "rgb(255, 99, 132)",
+              "rgb(46, 217, 16)",
+              "rgb(255, 205, 86)",
+            ],
+            hoverOffset: 4,
+          },
+        ],
+      };
+
+      const config = {
+        type: "doughnut",
+        data: data,
+      };
+
+      const myChart = new Chart(
+        document.getElementById("analysis-chart"),
+        config
+      );
+    </script>
+  </body>
+</html>
